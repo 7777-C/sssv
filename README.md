@@ -1,5 +1,4 @@
-# Comparación Empírica de Algoritmos de Ordenación  
-### *BubbleSort · SelectionSort · InsertionSort*
+# Búsqueda en Java: Secuencial y Binaria
 
 ![Java](https://img.shields.io/badge/Java-21-blue?style=for-the-badge)
 ![Maven](https://img.shields.io/badge/Maven-Project-orange?style=for-the-badge)
@@ -101,7 +100,7 @@ Se realiza estas acciones al ejecutar:
 ArraySearch.binarySearch(array, key);
 
 ```
-- Arreglo debe estar ordenado. Se incluye ordenamiento automático con BubbleSort.
+Arreglo debe estar ordenado. Se incluye ordenamiento automático con BubbleSort.
 No funciona con listas enlazadas. Aunque estén ordenadas.
 Costo adicional - Tiempo de ordenamiento incluido en la medición
 
@@ -140,6 +139,8 @@ ArraySearch.findFirst(emptyArray, 10.0);  // Retorna -1
 ArraySearch.binarySearch(emptyArray, 10.0); // Retorna -1
 
 ```
+Todos los algoritmos retornan -1 sin excepciones
+
 ## Un solo elemento
 ```java
 
@@ -148,6 +149,8 @@ ArraySearch.findFirst(single, 50.0);  // Retorna 0
 ArraySearch.binarySearch(single, 50.0); // Retorna 0 (crítico para while loop)
 
 ```
+Índice correcto en búsqueda exitosa.
+
 ## ELemento no existente
 ```java
 
@@ -155,12 +158,17 @@ Double[] array = {10.0, 20.0, 30.0};
 ArraySearch.findSentinel(array, 99.0); // Retorna -1
 
 ```
+Retorna -1 consistentemente
+
 ## Valores nulos
 ```java
 
 ArraySearch.findFirst(array, null); // Retorna -1
 
 ```
+
+No causa NullPointerException.
+
 ## Elementos duplicados
 ```java
 
@@ -171,6 +179,8 @@ SLLSearch.findAll(head, 12.0);           // Retorna 4 nodos
 
 ```
 
+Primera/última ocurrencia correctamente identificada.
+
 ## Todos elementos iguales
 ```java
 
@@ -180,6 +190,8 @@ ArraySearch.findLast(allSame, 5.0);  // Retorna 3
 
 ```
 
+Manejo correcto de duplicados masivos
+
 ## Elemento del Inicio/Fin
 ```java
 
@@ -188,4 +200,6 @@ ArraySearch.findFirst(edges, 42.0); // Retorna 0
 ArraySearch.findLast(edges, 99.0);  // Retorna 3
 
 ```
+ Índices extremos correctamente manejados
+ 
 ---
